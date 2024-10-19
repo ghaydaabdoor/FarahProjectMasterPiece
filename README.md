@@ -1,6 +1,9 @@
 Wedding Services Website
+
 Author: Ghayda'a Bdoor
+
 Project: Orange Coding Academy - Masterpiece Project
+
 Platform: Web-based Wedding Services in Irbid, Jordan
 
 Overview
