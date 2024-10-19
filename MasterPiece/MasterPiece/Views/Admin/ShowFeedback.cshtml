@@ -1,0 +1,95 @@
+﻿@model IEnumerable<MasterPiece.Models.Feedback>
+
+@{
+    ViewBag.Title = "عرض التعليقات";
+    Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+<style>
+    th, td {
+        text-align: right;
+    }
+
+    h5, h4 {
+        width: 100%;
+        text-align: right;
+    }
+
+    .modal-body {
+        max-height: 650px;
+        overflow-y: scroll;
+    }
+
+    .swal2-actions {
+        direction: rtl;
+    }
+
+    .swal2-confirm {
+        margin-left: 5px;
+    }
+
+    .swal2-cancel {
+        margin-right: 5px;
+    }
+</style>
+
+<div class="container-fluid pt-4 px-4">
+    <div class="bg-light text-center rounded p-4">
+        <div class="d-flex align-items-center justify-content-between mb-4">
+            <h2 class="text-end">عرض التعليقات</h2>
+        </div>
+        <div class="table-responsive">
+            <table class="table text-start align-middle table-bordered table-hover mb-0" dir="rtl">
+                <thead>
+                    <tr class="text-dark">
+                        <th scope="col">الرقم</th>
+                        <th scope="col">الاسم</th>
+                        <th scope="col">البريد الالكتروني</th>
+                        <th scope="col">العنوان</th>
+                        <th scope="col">نص الرسالة</th>
+                        <th scope="col">تاريخ الإرسال</th>
+                        <th scope="col">الإجراءات</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var feedback in Model)
+                    {
+                        <tr>
+                            <td>@feedback.FeedbackID</td>
+                            <td>@feedback.Name</td>
+                            <td>@feedback.Email</td>
+                            <td>@feedback.Subject</td>
+                            <td>@feedback.Message</td>
+                            <td>@(feedback.CreatedAt.HasValue ? feedback.CreatedAt.Value.ToString("yyyy/MM/dd HH:mm") : "غير متوفر")</td>
+                            <td>
+                                <!-- Action Buttons -->
+                                <form id="deleteForm-@feedback.FeedbackID" action="@Url.Action("DeleteFeedback", "Admin", new { id = @feedback.FeedbackID })" method="post" style="display:inline-block;">
+                                    @Html.AntiForgeryToken()
+                                    <button type="button" class="btn btn-sm btn-danger" onclick="confirmDelete(@feedback.FeedbackID)">حذف</button>
+                                </form>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+<script>
+    function confirmDelete(feedbackId) {
+        Swal.fire({
+            title: 'هل أنت متأكد من حذف هذا التعليق؟',
+            icon: 'warning',
+            showCancelButton: true,
+            confirmButtonColor: '#3085d6',
+            cancelButtonColor: '#d33',
+            cancelButtonText: 'إلغاء',
+            confirmButtonText: 'تأكيد',
+        }).then((result) => {
+            if (result.isConfirmed) {
+                // Submit the form if confirmed
+                document.getElementById('deleteForm-' + feedbackId).submit();
+            }
+        });
+    }
+</script>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="77e1c701bb5c491b878a58feb0caa5d5" Name="Diagram1" ZoomLevel="82">
+        <EntityTypeShape EntityType="MasterPieceModel.BookingCloth" Width="1.5" PointX="3" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.BookingPhotographer" Width="1.5" PointX="6" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.Booking" Width="1.5" PointX="3" PointY="5.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.ClothDetail" Width="1.5" PointX="3" PointY="34.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.Cloth" Width="1.5" PointX="0.75" PointY="15.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.FarmDetail" Width="1.5" PointX="3" PointY="29.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.Farm" Width="1.5" PointX="0.75" PointY="4.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.Food" Width="1.5" PointX="8.75" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.FoodDetail" Width="1.5" PointX="11" PointY="7.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.InvitationCardForm" Width="1.5" PointX="3" PointY="15.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.InvitationCard" Width="1.5" PointX="0.75" PointY="19.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.Order" Width="1.5" PointX="5.25" PointY="3.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.Payment" Width="1.5" PointX="7.5" PointY="3.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.PhotographerDetail" Width="1.5" PointX="6" PointY="20" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.Photographer" Width="1.5" PointX="3.75" PointY="20.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.RegisteredService" Width="1.5" PointX="6" PointY="7.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.Service" Width="1.5" PointX="3.75" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.sysdiagram" Width="1.5" PointX="9.75" PointY="1.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.User" Width="1.5" PointX="0.75" PointY="10.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.WeddingCart" Width="1.5" PointX="8.75" PointY="10.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.WeddingVenueDetail" Width="1.5" PointX="3" PointY="24.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="MasterPieceModel.WeddingVenue" Width="1.5" PointX="0.75" PointY="0.875" IsExpanded="true" />
+        <AssociationConnector Association="MasterPieceModel.FK__BookingCl__Cloth__5224328E" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__BookingCl__UserI__51300E55" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__Photograp__Photo__55F4C372" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__Photograp__UserI__55009F39" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__Bookings__FarmId__4E53A1AA" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__Bookings__UserId__693CA210" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__Bookings__VenueI__4D5F7D71" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__Orders__BookingI__6C190EBB" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__ClothDeta__Cloth__2EDAF651" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__FarmDetai__FarmI__2BFE89A6" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__FoodDetai__FoodI__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__Invitatio__CardD__40058253" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__Invitatio__UserI__3F115E1A" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__Payments__OrderI__6EF57B66" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__Photograp__Photo__6383C8BA" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__Registere__Servi__73BA3083" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__Registere__UserI__72C60C4A" ManuallyRouted="false" />
+        <AssociationConnector Association="MasterPieceModel.FK__WeddingVe__Venue__151B244E" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MasterPieceModel.Feedback" Width="1.5" PointX="11.375" PointY="10.75" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

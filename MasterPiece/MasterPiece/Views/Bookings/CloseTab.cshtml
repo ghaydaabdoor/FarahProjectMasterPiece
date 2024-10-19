@@ -1,0 +1,33 @@
+﻿
+@{
+    ViewBag.Title = "CloseTab";
+    Layout = "~/Views/Shared/_LayoutUser.cshtml";
+}
+<link href="~/Content/Bookvenue.css" rel="stylesheet" />
+<style>
+    .section{
+        margin:100px 0;
+    }
+    h2,p,a{
+        margin-bottom:25px;
+    }
+    .ServiceBookBtn{
+        margin-top:5px;
+    }
+
+</style>
+
+<main class="main">
+    <section id="EachService" class="EachService section">
+        <div class="BookFormcontainer">
+            <div class="form-container">
+                <div style="text-align: center; margin: 30px;">
+                    <h2>تمت عملية الدفع بنجاح</h2>
+                    <p>يمكنك معرفة حجوزاتك من خلال صفحتك الشخصية عبر @Html.ActionLink("الرابط", "Profile", "Users")</p>
+                    <a class="btn-getstarted ServiceBookBtn" href="@Url.Action("Index", "Home")">العودة للصفحة الرئيسية</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</main>
+
